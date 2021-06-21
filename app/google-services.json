@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "884989526668",
+    "firebase_url": "https://database2-d6a2c-default-rtdb.firebaseio.com",
+    "project_id": "database2-d6a2c",
+    "storage_bucket": "database2-d6a2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884989526668:android:13f6b07506749da33e71a9",
+        "android_client_info": {
+          "package_name": "com.example.mypolice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884989526668-4ad3iebjkuhtkvgn2fi2meb3gdj63tue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArLN4UGLz9GpokEAyXGorwi0TPygu3cIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884989526668-4ad3iebjkuhtkvgn2fi2meb3gdj63tue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

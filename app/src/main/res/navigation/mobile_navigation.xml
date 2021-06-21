@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.mypolice.SplashScreenFragment"
+        android:label="MyPolice"
+        tools:layout="@layout/fragment_splash_screen" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.mypolice.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_haloPolFragment"
+            app:destination="@id/haloPolFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_SKCKFragment"
+            app:destination="@id/SKCKFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_ETilangFragment"
+            app:destination="@id/ETilangFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_trackRecordFragment"
+            app:destination="@id/trackRecordFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_dokumenKendaraanFragment"
+            app:destination="@id/dokumenKendaraanFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_daftarPolisiFragment"
+            app:destination="@id/daftarPolisiFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mobile_navigation" />
+        <action
+            android:id="@+id/action_dashboardFragment_self"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_daftarPolisiFragment2"
+            app:destination="@id/daftarPolisiFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.mypolice.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mypolice.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mypolice.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/mobile_navigation" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrasiFragment"
+            app:destination="@id/registrasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/haloPolFragment"
+        android:name="com.example.mypolice.ui.dashboard.halo_polisi.HaloPolFragment"
+        android:label="fragment_halo_pol"
+        tools:layout="@layout/fragment_halo_pol" >
+        <action
+            android:id="@+id/action_haloPolFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_haloPolFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_haloPolFragment_to_haloBencanaFragment"
+            app:destination="@id/haloBencanaFragment" />
+        <action
+            android:id="@+id/action_haloPolFragment_to_haloFormLaporanFragment"
+            app:destination="@id/haloFormLaporanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dokumenKendaraanFragment"
+        android:name="com.example.mypolice.ui.dashboard.dokumen_kendaraan.DokumenKendaraanFragment"
+        android:label="fragment_dokumen_kendaraan"
+        tools:layout="@layout/fragment_dokumen_kendaraan" />
+    <fragment
+        android:id="@+id/daftarPolisiFragment"
+        android:name="com.example.mypolice.ui.dashboard.DashboardFragment"
+        android:label="fragment_daftar_polisi"
+        tools:layout="@layout/fragment_daftar_polisi" />
+    <fragment
+        android:id="@+id/trackRecordFragment"
+        android:name="com.example.mypolice.ui.dashboard.track_record.TrackRecordFragment"
+        android:label="fragment_track_record"
+        tools:layout="@layout/fragment_track_record" />
+    <fragment
+        android:id="@+id/monitorFragment"
+        android:name="com.example.mypolice.ui.dashboard.sensor.MonitorFragment"
+        android:label="fragment_monitor"
+        tools:layout="@layout/fragment_monitor" />
+    <fragment
+        android:id="@+id/SKCKFragment"
+        android:name="com.example.mypolice.ui.dashboard.skck.SKCKFragment"
+        android:label="fragment_s_k_c_k"
+        tools:layout="@layout/fragment_s_k_c_k" >
+        <action
+            android:id="@+id/action_SKCKFragment_to_blankoSatuFragment"
+            app:destination="@id/blankoSatuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ETilangFragment"
+        android:name="com.example.mypolice.ui.dashboard.e_tilang.ETilangFragment"
+        android:label="fragment_e_tilang"
+        tools:layout="@layout/fragment_e_tilang" >
+        <action
+            android:id="@+id/action_ETilangFragment_to_cekDendaFragment"
+            app:destination="@id/cekDendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cekDendaFragment"
+        android:name="com.example.mypolice.ui.dashboard.e_tilang.cek_denda.CekDendaFragment"
+        android:label="fragment_cek_denda"
+        tools:layout="@layout/fragment_cek_denda" />
+    <fragment
+        android:id="@+id/bankTerdekatFragment"
+        android:name="com.example.mypolice.BankTerdekatFragment"
+        android:label="fragment_bank_terdekat"
+        tools:layout="@layout/fragment_bank_terdekat" />
+    <fragment
+        android:id="@+id/caraBayarFragment"
+        android:name="com.example.mypolice.CaraBayarFragment"
+        android:label="fragment_cara_bayar"
+        tools:layout="@layout/fragment_cara_bayar" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.mypolice.ui.dashboard.halo_polisi.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/haloFormLaporanFragment"
+        android:name="com.example.mypolice.HaloFormLaporanFragment"
+        android:label="fragment_halo_form_laporan"
+        tools:layout="@layout/fragment_halo_form_laporan" />
+    <fragment
+        android:id="@+id/haloBencanaFragment"
+        android:name="com.example.mypolice.HaloBencanaFragment"
+        android:label="fragment_halo_bencana"
+        tools:layout="@layout/fragment_halo_bencana" />
+    <fragment
+        android:id="@+id/registrasiFragment"
+        android:name="com.example.mypolice.ui.login.RegistrasiFragment"
+        android:label="fragment_registrasi"
+        tools:layout="@layout/fragment_registrasi" >
+        <action
+            android:id="@+id/action_registrasiFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/mobile_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/haloMonitorKecelakaanFragment"
+        android:name="com.example.mypolice.HaloMonitorKecelakaanFragment"
+        android:label="fragment_halo_monitor_kecelakaan"
+        tools:layout="@layout/fragment_halo_monitor_kecelakaan" />
+    <fragment
+        android:id="@+id/blankoSatuFragment"
+        android:name="com.example.mypolice.BlankoSatuFragment"
+        android:label="fragment_blanko_satu"
+        tools:layout="@layout/fragment_blanko_satu" >
+        <action
+            android:id="@+id/action_blankoSatuFragment_to_blankoDuaFragment"
+            app:destination="@id/blankoDuaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daftarPolisiFragment2"
+        android:name="com.example.mypolice.ui.dashboard.daftar_polisi.DaftarPolisiFragment"
+        android:label="fragment_daftar_polisi"
+        tools:layout="@layout/fragment_daftar_polisi" />
+    <fragment
+        android:id="@+id/blankoDuaFragment"
+        android:name="com.example.mypolice.BlankoDuaFragment"
+        android:label="fragment_blanko_dua"
+        tools:layout="@layout/fragment_blanko_dua" >
+        <action
+            android:id="@+id/action_blankoDuaFragment_to_blankoTigaFragment"
+            app:destination="@id/blankoTigaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankoTigaFragment"
+        android:name="com.example.mypolice.BlankoTigaFragment"
+        android:label="fragment_blanko_tiga"
+        tools:layout="@layout/fragment_blanko_tiga" />
+</navigation>
