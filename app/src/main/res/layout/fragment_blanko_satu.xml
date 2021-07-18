@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".BlankoSatuFragment">
+    tools:context=".ui.dashboard.skck.blanko.BlankoSatuFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
@@ -65,137 +65,208 @@
                 android:layout_marginTop="8dp"
                 android:text="Lanjut"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName38" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Telp" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/ID_BlankoSatu_BtnSimpan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Simpan"
                 app:layout_constraintEnd_toStartOf="@+id/ID_BlankoSatu_BtnLanjut"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName38" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Telp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName26"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_NamaLengkap"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView65"
                 app:layout_constraintTop_toBottomOf="@+id/textView64" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName27"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_TempatLahir"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView66"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName26" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_NamaLengkap" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName29"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_TanggalLahir"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView67"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName27" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_TempatLahir" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+
                 android:id="@+id/editTextTextPersonName30"
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView68"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName29" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_TanggalLahir">
 
-            <EditText
+                <AutoCompleteTextView
+                    android:id="@+id/ID_BlankoSatu_RgAgama"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="-- Pilih Agama --" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
                 android:id="@+id/editTextTextPersonName31"
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView69"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName30" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName30">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName32"
+                <AutoCompleteTextView
+                    android:id="@+id/ID_BlankoSatu_EdtKebngsaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Kebangsaan" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/ID_BlankoSatu_JenisKelamin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toEndOf="@+id/textView70"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName33"
+                <RadioButton
+                    android:id="@+id/Laki"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Laki-Laki" />
+
+                <RadioButton
+                    android:id="@+id/Perempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/ID_BlankoSatu_Status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toEndOf="@+id/textView71"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName32" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_JenisKelamin">
+
+                <RadioButton
+                    android:id="@+id/Kawin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Kawin" />
+
+                <RadioButton
+                    android:id="@+id/Tidak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Kawin" />
+            </RadioGroup>
 
             <EditText
-                android:id="@+id/editTextTextPersonName34"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_Pekerjaan"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView72"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName33" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Status" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName35"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_Alamat"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView73"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName34" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Pekerjaan" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName36"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_KTP"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView74"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName35" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Alamat" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName37"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_KK"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView75"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName36" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_KTP" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName38"
-                android:layout_width="wrap_content"
+                android:id="@+id/ID_BlankoSatu_Telp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView76"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName37" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_KK" />
 
             <TextView
                 android:id="@+id/textView64"
@@ -216,9 +287,9 @@
                 android:text="Nama Lengkap"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName26"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_NamaLengkap"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName26" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_NamaLengkap" />
 
             <TextView
                 android:id="@+id/textView66"
@@ -227,9 +298,9 @@
                 android:text="Tempat Lahir"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName27"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_TempatLahir"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName26" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_TempatLahir" />
 
             <TextView
                 android:id="@+id/textView67"
@@ -238,9 +309,9 @@
                 android:text="Tanggal Lahir"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName29"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_TanggalLahir"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName27" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_TanggalLahir" />
 
             <TextView
                 android:id="@+id/textView68"
@@ -251,7 +322,7 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName30"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName29" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_TanggalLahir" />
 
             <TextView
                 android:id="@+id/textView69"
@@ -260,7 +331,7 @@
                 android:text="Kebangsaan"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName32"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName31"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName31" />
 
@@ -271,9 +342,9 @@
                 android:text="Jenis Kelamin"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName32"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_JenisKelamin"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName32" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_JenisKelamin" />
 
             <TextView
                 android:id="@+id/textView71"
@@ -282,9 +353,9 @@
                 android:text="Status"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName33"
+                app:layout_constraintBottom_toTopOf="@+id/ID_BlankoSatu_Pekerjaan"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName33" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_Status" />
 
             <TextView
                 android:id="@+id/textView72"
@@ -293,9 +364,9 @@
                 android:text="Pekerjaan"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName34"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_Pekerjaan"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName33" />
+                app:layout_constraintTop_toBottomOf="@+id/ID_BlankoSatu_Status" />
 
             <TextView
                 android:id="@+id/textView73"
@@ -304,9 +375,9 @@
                 android:text="Alamat"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName36"
+                app:layout_constraintBottom_toTopOf="@+id/ID_BlankoSatu_KTP"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName35" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_Alamat" />
 
             <TextView
                 android:id="@+id/textView74"
@@ -315,9 +386,9 @@
                 android:text="No. KTP"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName36"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_KTP"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName36" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_KTP" />
 
             <TextView
                 android:id="@+id/textView75"
@@ -326,9 +397,9 @@
                 android:text="No. KK"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName37"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_KK"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName37" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_KK" />
 
             <TextView
                 android:id="@+id/textView76"
@@ -337,9 +408,9 @@
                 android:text="No. Telephone/ HP"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName38"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_BlankoSatu_Telp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName38" />
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoSatu_Telp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

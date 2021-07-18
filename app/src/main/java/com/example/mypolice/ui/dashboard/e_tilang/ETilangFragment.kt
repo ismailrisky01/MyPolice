@@ -20,6 +20,12 @@ class ETilangFragment : MyFragment<FragmentETilangBinding>(R.layout.fragment_e_t
         binding.IDETilangBtnCekDenda.setOnClickListener {
             findNavController().navigate(R.id.action_ETilangFragment_to_cekDendaFragment)
         }
+        binding.IDETilangBtnETLE.setOnClickListener {
+            findNavController().navigate(R.id.action_ETilangFragment_to_mekanismeEtleFragment)
+        }
+        binding.IDETilangBtnCaraBayar.setOnClickListener {
+            findNavController().navigate(R.id.action_ETilangFragment_to_brivaFragment)
+        }
     }
 
 

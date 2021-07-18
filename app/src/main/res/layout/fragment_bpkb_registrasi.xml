@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.dokumen_kendaraan.bpkb.BpkbRegistrasiFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F66E00"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrasi"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView186"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Persyaratan perubahan ranmor"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar1" />
+
+    <TextView
+        android:id="@+id/textView187"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="  Persyaratan regident perubahan dan fungsi Ranmor  1.Penerbitan BPKB yang mengalami perubahan nama pemilik tanpa perubahan alamat harus memenuhi persyaratan: a) mengisi formulir permohonan; b) melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; c) melampirkan akte perubahan nama bagi badan hukum; d) melampirkan penetapan pengadilan bagi pemilik perorangan; e) BPKB f) STNK; dan g) hasil pemeriksaan cek fisik Ranmor.  2.Persyaratan perubahan data BPKB atas dasar perubahan alamat pemilik Ranmor dalam wilayah Regident yang sama meliputi: a) mengisi formulir permohonan; dan b) melampirkan tanda bukti identitas:       1.KTP di tempat yang baru bagi perorangan; atau      2.akte perubahan alamat bagi badan hukum; dan c) surat kuasa dari pemilik yang pengurusan pendaftarannya dilakukan oleh kuasanya. d) BPKB; e) STNK; dan f) hasil Pemeriksaan Cek Fisik Ranmor.  3.Penerbitan BPKB yang mengalami perubahan  nama dan alamat dalam satu wilayah Regident Ranmor harus memenuhi persyaratan: a) mengisi formulir permohonan; b)melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; c)BPKB; d)STNK; dan e)hasil pemeriksaan cek fisik Ranmor.  3. Persyaratan perubahan data BPKB atas dasar perubahan alamat pemilik atau mutasi Ranmor ke luar wilayah Regident meliputi: a) mengisi formulir permohonan; b) melampirkan tanda bukti identitas:       1. KTP di tempat yang baru bagi perorangan; atau      2. akte perubahan alamat bagi badan hukum; c) surat kuasa dari pemilik yang pengurusan pendaftarannya dilakukan oleh kuasanya; d) BPKB; e) STNK; dan f) hasil pemeriksaan cek fisik Ranmor.                                                   Pasal 51  Persyaratan perubahan data BPKB atas dasar perubahan nomor Registrasi Ranmor meliputi:  a) mengisi formulir permohonan; b) melampirkan  tanda  bukti identitas sebagaimana  dimaksud dalam Pasal 44 huruf b; c) BPKB; d) STNK; e) surat permohonan dari pemilik tentang nomor registrasi yang diinginkan; dan f) hasil pemeriksaan cek fisik Ranmor.                                                 Pasal 52  Persyaratan perubahan data BPKB atas dasar perubahan fungsi Ranmor meliputi:  a) mengisi formulir permohonan; b) melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; c) BPKB; d) STNK; hasil pemeriksaan cek fisik Ranmor; surat izin penyelenggaraan angkutan umum dari instansi yang berwenang bagi perubahan fungsi dari Ranmor perseorangan menjadi Ranmor angkutan umum; dan/atau surat keterangan dari instansi yang berwenang bagi perubahan fungsi dari Ranmor angkutan umum menjadi Ranmor perseorangan.                                                 Pasal 53  Persyaratan Regident Perubahan Fisik Ranmor  Persyaratan perubahan data BPKB atas dasar perubahan mesin dan/atau bentuk Ranmor meliputi:  a) mengisi formulir permohonan; b) melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; c) BPKB; d) STNK; Surat keterangan dari APM atau bengkel umum yang melaksanakan perubahan mesin dan/atau bentuk Ranmor; PIB untuk penggantian mesin baru dari impor atau faktur pembelian untuk penggantian mesin baru yang diproduksi dalam negeri; Sertifikat Uji Tipe dan SRUT; dan/atau hasil pemeriksaan cek fisik Ranmor.                                                 Pasal 54  Persyaratan perubahan data BPKB atas dasar perubahan warna Ranmor meliputi:  mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud pada Pasal 44 huruf b; BPKB; STNK; surat keterangan dari Agen Pemegang Merek (APM) atau bengkel umum yang melaksanakan perubahan warna Ranmor; dan hasil pemeriksaan cek fisik Ranmor.                                               Pasal 55 Persyaratan pemindahan kepemilikan ranmor:  Persyaratan perubahan data BPKB atas dasar perubahan warna Ranmor meliputi:  mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud pada Pasal 44 huruf b; BPKB; STNK; surat keterangan dari Agen Pemegang Merek (APM) atau bengkel umum yang melaksanakan perubahan warna Ranmor; dan hasil pemeriksaan cek fisik Ranmor. Pasal 56 Penerbitan BPKB pemindahtangganan kepemilikan di dalam satu wilayah Regident Ranmor sebagaimana dimaksud dalam Pasal 55 ayat (1) harus memenuhi persyaratan: mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; tanda bukti pemindahtanganan kepemilikan Ranmor berupa: kuitansi pembelian bermeterai cukup bagi pemindahtanganan karena jual beli; risalah lelang Ranmor dan/atau putusan pengadilan yang telah mempunyai kekuatan hukum tetap bagi pemindahtanganan karena lelang; akta hibah yang ditandatangani oleh pemberi hibah dan/atau para ahli waris bagi pemindahtanganan karena hibah; akte penyertaan bagi pemindahtanganan karena penyertaan Ranmor sebagai modal; akte penggabungan bagi pemindahtanganan karena penggabungan perusahaan berbadan hukum; atau surat keterangan kematian dan persetujuan para ahli waris atau akte notaris bagi pemindahtanganan karena warisan; BPKB; STNK; dan hasil pemeriksaan cek fisik Ranmor. Penerbitan BPKB pemindahtangganan kepemilikan ke luar wilayah Regident Ranmor sebagaimana dimaksud dalam Pasal 55 ayat (1) harus memenuhi persyaratan: mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; tanda bukti pemindahtanganan kepemilikan Ranmor berupa: kuitansi pembelian bermeterai cukup bagi pemindahtanganan karena jual beli; risalah lelang Ranmor dan/atau putusan pengadilan yang telah mempunyai kekuatan hukum tetap bagi pemindahtanganan karena lelang; akta hibah yang ditandatangani oleh pemberi hibah dan/atau para ahli waris bagi pemindahtanganan karena hibah; akte penyertaan bagi pemindahtanganan karena penyertaan Ranmor sebagai modal; akte penggabungan bagi pemindahtanganan karena penggabungan perusahaan berbadan hukum; atau surat keterangan kematian dan persetujuan para ahli waris atau akte notaris bagi pemindahtanganan karena warisan; tanda bukti penerimaan penyerahan BPKB dan STNK dari unit pelaksana regident asal; tindasan surat pengantar mutasi; dan hasil pemeriksaan cek fisik Ranmor. Penerbitan BPKB pemindahtangganan kepemilikan untuk Ranmor bekas lembaga internasional atau kedutaan harus memenuhi persyaratan: mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b; kuitansi pembelian bermeterai cukup; surat keterangan pelepasan hak dari kedutaan atau lembaga internasional yang bersangkutan; menyerahkan BPKB dan fotokopi STNK CD/CC atau lembaga internasional; tanda bukti pelunasan bea masuk bagi pemindahtanganan Ranmor yang diperoleh dari impor dengan fasilitas penangguhan atau pembebasan bea masuk, atau Formulir C; surat rekomendasi dari kementerian luar negeri untuk kendaraan kedutaan dan surat rekomendasi sekretariat negara untuk Ranmor lembaga internasional; surat hasil penelitian keabsahan surat keterangan pengimporan Ranmor yang dikeluarkan oleh Direktur Lalu Lintas Kepolisian Daerah, atau Kepala Korps Lalu Lintas Polri bagi Ranmor yang masuk melalui wilayah pabean DKI Jakarta; dan hasil pemeriksaan cek fisik Ranmor. Penerbitan BPKB pemindahtangganan kepemilikan untuk Ranmor bekas taksi yang menggunakan fasilitas penangguhan bea masuk harus memenuhi persyaratan: mengisi formulir permohonan; melampirkan tanda bukti identitas sebagaimana dimaksud dalam Pasal 44 huruf b angka 1; kuitansi pembelian bermeterai cukup; BPKB dan fotokopi STNK; surat keterangan pelepasan hak dari perusahaan yang bersangkutan; bukti pelunasan bea masuk dari Ditjen Bea dan Cukai atau Formulir C; surat hasil penelitian keabsahan surat keterangan pengimporan Ranmor yang dikeluarkan oleh Direktur Lalu Lintas Kepolisian Daerah, atau Kepala Korps Lalu Lintas Polri bagi Ranmor yang masuk melalui wilayah pabean DKI Jakarta; dan hasil pemeriksaan cek fisik Ranmor."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView186" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

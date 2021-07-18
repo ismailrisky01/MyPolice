@@ -5,18 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.mypolice.R
+import com.example.mypolice.databinding.FragmentDashboardBinding
+import com.example.mypolice.databinding.FragmentDokumenKendaraanBinding
+import com.example.mypolice.utils.MyFragment
 
 
-class DokumenKendaraanFragment : Fragment() {
+class DokumenKendaraanFragment : MyFragment<FragmentDokumenKendaraanBinding>(R.layout.fragment_dokumen_kendaraan) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dokumen_kendaraan, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.simCardView.setOnClickListener {
+            findNavController().navigate(R.id.action_dokumenKendaraanFragment_to_simBlankoSatuFragment)
+        }
+        binding.stnkCardView.setOnClickListener {
+            findNavController().navigate(R.id.action_dokumenKendaraanFragment_to_stnkBlankoSatuFragment)
+        }
+        binding.bpkbCardView.setOnClickListener {
+            findNavController().navigate(R.id.action_dokumenKendaraanFragment_to_bpkbFragment)
+        }
     }
-
-
 }

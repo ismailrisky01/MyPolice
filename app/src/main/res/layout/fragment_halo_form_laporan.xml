@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HaloFormLaporanFragment">
+    tools:context=".ui.dashboard.halo_polisi.form_laporan.HaloFormLaporanFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="8dp"
@@ -13,16 +14,16 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/ID_Halo_BtnSimpan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Simpan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtUraianSingkat" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName9"
+            android:id="@+id/ID_Halo_EdtIdentitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -34,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/ID_Halo_EdtWaktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -43,10 +44,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView50"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtIdentitas" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName13"
+            android:id="@+id/ID_Halo_EdtTempat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -55,10 +56,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView51"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtWaktu" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName14"
+            android:id="@+id/ID_Halo_EdtYangTerjadi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -67,10 +68,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtTempat" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/ID_Halo_EdtTerlapor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -79,10 +80,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtYangTerjadi" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName16"
+            android:id="@+id/ID_Halo_EdtKorban"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -91,10 +92,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView52"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtTerlapor" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName17"
+            android:id="@+id/ID_Halo_EdtBagaimanaTerjadi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -103,10 +104,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView53"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtKorban" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName18"
+            android:id="@+id/ID_Halo_EdtSaksi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -115,10 +116,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView54"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtBagaimanaTerjadi" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName19"
+            android:id="@+id/ID_Halo_EdtIdentitasSaksi1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -127,10 +128,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView55"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtSaksi" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName20"
+            android:id="@+id/ID_Halo_EdtIdentitasSaksi2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -139,11 +140,11 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView56"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName19" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtIdentitasSaksi1" />
 
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/ID_Halo_EdtUraianSingkat"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:ems="10"
@@ -151,7 +152,7 @@
             android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView19"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtIdentitasSaksi2" />
 
         <TextView
             android:id="@+id/textView49"
@@ -160,9 +161,9 @@
             android:text="Identitas Pelapor"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtIdentitas"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9" />
+            app:layout_constraintTop_toTopOf="@+id/ID_Halo_EdtIdentitas" />
 
         <TextView
             android:id="@+id/textView50"
@@ -171,9 +172,9 @@
             android:text="Waktu Kejadian"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName12"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtWaktu"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtIdentitas" />
 
         <TextView
             android:id="@+id/textView51"
@@ -182,9 +183,9 @@
             android:text="Tempat Kejadian"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName13"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtTempat"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtWaktu" />
 
         <TextView
             android:id="@+id/textView10"
@@ -193,9 +194,9 @@
             android:text="Apa yang terjadi"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName14"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtYangTerjadi"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtTempat" />
 
         <TextView
             android:id="@+id/textView13"
@@ -204,9 +205,9 @@
             android:text="Terlapor"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName15"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtTerlapor"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtYangTerjadi" />
 
         <TextView
             android:id="@+id/textView52"
@@ -215,9 +216,9 @@
             android:text="Korban"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName16"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtKorban"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtTerlapor" />
 
         <TextView
             android:id="@+id/textView53"
@@ -226,9 +227,9 @@
             android:text="Bagaimana terjadi"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName17"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtBagaimanaTerjadi"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtKorban" />
 
         <TextView
             android:id="@+id/textView54"
@@ -237,9 +238,9 @@
             android:text="Saksi-saksi"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName18"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtSaksi"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtBagaimanaTerjadi" />
 
         <TextView
             android:id="@+id/textView55"
@@ -248,9 +249,9 @@
             android:text="identitas saksi 1"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName19"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtIdentitasSaksi1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtSaksi" />
 
         <TextView
             android:id="@+id/textView56"
@@ -259,9 +260,9 @@
             android:text="identitas saksi 2"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName20"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtIdentitasSaksi2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName19" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_Halo_EdtIdentitasSaksi1" />
 
         <TextView
             android:id="@+id/textView19"
@@ -270,9 +271,9 @@
             android:text="Uraian singkat kejadian"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextMultiLine"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_Halo_EdtUraianSingkat"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine" />
+            app:layout_constraintTop_toTopOf="@+id/ID_Halo_EdtUraianSingkat" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -313,3 +314,4 @@ android:text="Form Laporan"
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

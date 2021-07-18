@@ -4,6 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mypolice.databinding.ItemChatBinding
@@ -11,6 +13,7 @@ import com.example.mypolice.model.ModelChat
 import java.net.URLEncoder
 
 class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
+    var countryFilterList :String = ""
     private var data = emptyList<ModelChat>()
     fun setData(datas: List<ModelChat>) {
         this.data = datas
@@ -51,4 +54,6 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
             }
         }
     }
+
+ 
 }

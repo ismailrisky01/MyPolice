@@ -54,57 +54,53 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Hari tanggal kejadian"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName21"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_HaloBencana_EdtJenisBencana"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName21" />
+            app:layout_constraintTop_toTopOf="@+id/ID_HaloBencana_EdtJenisBencana" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName21"
+            android:id="@+id/ID_HaloBencana_EdtJenisBencana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView48"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName22"
+            android:id="@+id/ID_HaloBencana_EdtTanggalBencana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView57"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtJenisBencana" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName23"
+            android:id="@+id/ID_HaloBencana_EdtWaktuBencana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView58"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtTanggalBencana" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName24"
+            android:id="@+id/ID_HaloBencana_EdtKronologi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView59"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName23" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtWaktuBencana" />
 
         <EditText
             android:id="@+id/editTextTextPersonName25"
@@ -113,37 +109,36 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView60"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName24" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtKronologi" />
 
         <TextView
             android:id="@+id/textView57"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Waktu kejadian"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName22"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_HaloBencana_EdtTanggalBencana"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtJenisBencana" />
 
         <TextView
             android:id="@+id/textView58"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Lokasi kejadian"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName23"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_HaloBencana_EdtWaktuBencana"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtTanggalBencana" />
 
         <TextView
             android:id="@+id/textView59"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Kejadian"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName24"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_HaloBencana_EdtKronologi"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName23" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtWaktuBencana" />
 
         <TextView
             android:id="@+id/textView60"
@@ -152,19 +147,19 @@
             android:text="a. Tabrak antara"
             app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName24" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_EdtKronologi" />
 
         <TextView
             android:id="@+id/textView61"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Bukti (gambar)"
-            app:layout_constraintBottom_toBottomOf="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_HaloBencana_BtnUpload"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button7" />
+            app:layout_constraintTop_toTopOf="@+id/ID_HaloBencana_BtnUpload" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/ID_HaloBencana_BtnUpload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -174,14 +169,14 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName25" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/ID_HaloBencana_BtnSimpan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Simoan"
-            app:layout_constraintEnd_toEndOf="@+id/button7"
-            app:layout_constraintStart_toStartOf="@+id/button7"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintEnd_toEndOf="@+id/ID_HaloBencana_BtnUpload"
+            app:layout_constraintStart_toStartOf="@+id/ID_HaloBencana_BtnUpload"
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_BtnUpload" />
 
         <TextView
             android:id="@+id/textView62"
@@ -193,7 +188,7 @@
             android:textColor="@color/design_default_color_error"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintTop_toBottomOf="@+id/ID_HaloBencana_BtnSimpan" />
 
         <TextView
             android:id="@+id/textView63"

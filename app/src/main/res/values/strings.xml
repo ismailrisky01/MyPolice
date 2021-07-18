@@ -2,4 +2,21 @@
     <string name="app_name">MyPolice</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="briva">TELLER BRI \\n
+        a. Ambil nomor antrian transaksi teller dan isi slip setoran\n
+        b. Isikan 15 angka Nomor Pembayaran Tilang pada kolom "Nomor Rekening" dan Nominal titipan denda tilang pada slip setoran\n
+        c. Serahkan slip setoran kepada Teller BRI\n
+        d. Teller BRI akan melakukan validasi transaksi\n
+        e. Simpan Slip Setoran hasil validasi sebagai bukti pembayaran yang sah\n
+        f. Slip setoran diserahkan ke penindak untuk ditukarkan dengan barang bukti yang disita\n\n
+        ATM BRI\n
+        a. Masukkan Kartu Debit BRI dan PIN Anda\n
+        b. Pilih menu Transaksi Lain > Pembayaran > Lainnya > BRIVA\n
+        c. Masukkan 15 angka Nomor Pembayaran Tilang\n
+        d. Di halaman konfirmasi, pastikan detil pembayaran sudah sesuai seperti Nomor BRIVA, Nama Pelanggar dan Jumlah Pembayaran e. Ikuti instruksi untuk menyelesaikan transaksi f. Copy struk ATM sebagai bukti pembayaran yang sah dan disimpan g. Struk ATM asli diserahkan ke penindak untuk ditukarkan dengan barang bukti yang disita  Mobile Banking BRI a. Login aplikasi BRI Mobile b. Pilih Menu Mobile Banking BRI > Pembayaran > BRIVA c. Masukkan 15 angka Nomor Pembayaran Tilang d. Masukkan nominal pembayaran sesuai jumlah denda yang harus dibayarkan. Transaksi akan ditolak jika pembayaran tidak sesuai dengan jumlah denda titipan e. Masukkan PIN f. Simpan notifikasi SMS sebagai bukti pembayaran g. Tunjukkan notifikasi SMS ke penindak untuk ditukarkan dengan barang bukti yang disita  Internet Banking BRI a. Login pada alamat Internet Banking BRI (https://ib.bri.co.id/ib-bri/Login.html) b. Pilih menu Pembayaran Tagihan > Pembayaran > BRIVA c. Pada kolom kode bayar, Masukkan 15 angka Nomor Pembayaran Tilang d. Di halaman konfirmasi, pastikan detil pembayaran sudah sesuai seperti Nomor BRIVA, Nama Pelanggar dan Jumlah Pembayaran e. Masukkan password dan mToken f. Cetak/simpan struk pembayaran BRIVA sebagai bukti pembayaran g. Tunjukkan bukti pembayaran ke penindak untuk ditukarkan dengan barang bukti yang disita  EDC BRI a. Pilih menu Mini ATM > Pembayaran > BRIVA b. Swipe kartu Debit BRI Anda c. Masukkan 15 angka Nomor Pembayaran Tilang d. Masukkan PIN e. Di halaman konfirmasi, pastikan detil pembayaran sudah sesuai seperti Nomor BRIVA, Nama Pelanggar dan Jumlah Pembayaran f. Copy dan Simpan struk transaksi sebagai bukti pembayaran g. Tunjukkan bukti pembayaran ke penindak untuk ditukarkan dengan barang bukti yang disita </string>
+    <string-array name="list">
+        <item>Indonesia</item>
+        <item>Pengajuan Yudisium</item>
+        <item>Pengajuan Sertif</item>
+    </string-array>
 </resources>

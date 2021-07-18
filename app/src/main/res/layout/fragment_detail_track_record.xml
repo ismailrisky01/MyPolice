@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.track_record.DetailTrackRecordFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F66E00"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ID_Halo_BtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track Record"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ID_Halo_BtnBack"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ID_DetailTrack_Image"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_DetailTrack_TxtJudul" />
+
+            <TextView
+                android:id="@+id/ID_DetailTrack_TxtJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dukung PPKM Darurat, Kapolri Minta Jajaran  Siapkan Strategi Penyekatan"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ID_DetailTrack_TxtKeterangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text='Jakarta - Pemerintah resmi mengumumkan penerapan PPKM darurat bakal dilaksanakan pada 3-20 Juli 2021. Kapolri Jenderal Listyo Sigit Prabowo meminta jajarannya agar mempersiapkan segala strategi untuk mendukung pelaksanaan PPKM darurat. "Besok kita akan memasuki masa PPKM Darurat dan Operasi Aman Nusa II Penanganan COVID-19 Lanjutan di Jawa dan Bali. Persiapkan segera strategi penjagaan dan penyekatan, pendisiplinan protokol kesehatan, dan implementasi lapangan kebijakan pembatasan ini," ujar Sigit melalui keterangan tertulis, Kamis (1/7/2021). Sigit menjelaskan, Polri memiliki anggota yang tangguh. Dengan demikian, Sigit memastikan pihaknya bakal mengerahkan seluruh kekuatan untuk membantu penanganan pandemi COVID-19.  "Sebagai Bhayangkara yang tangguh, Polri juga harus melakukan upaya terbaik dengan mengerahkan seluruh sumber daya yang ada dalam rangka membantu penanganan pandemi COVID-19," tuturnya.  Lebih lanjut, Sigit membeberkan ada beberapa cara yang bisa dilakukan kepolisian untuk membantu penanganan COVID-19. Di antaranya seperti melakukan vaksinasi hingga penyekatan jalan untuk membatasi mobilitas warga.  "Melalui pendisiplinan protokol kesehatan 5M, penguatan upaya 3T, penjagaan dan penyekatan, operasi yustisi, dan membantu akselerasi program vaksinasi nasional melalui gerai vaksinasi Presisi dan vaksinasi massal," imbuh Sigit.  Sebelumnya, Presiden Joko Widodo (Jokowi) memberlakukan PPKM darurat di Jawa dan Bali dimulai sejak 3 Juli hingga 20 Juli 2021. Jokowi mengatakan akan mengerahkan seluruh sumber daya untuk membantu mengatasi penyebaran COVID-19.  "Pemerintah akan mengerahkan seluruh sumber daya yang ada untuk mengatasi penyebaran COVID, seluruh aparat negara TNI, Polri maupun aparatur sipil negara, dokter, dan tenaga kesehatan harus bahu-membahu bekerja sebaik-baiknya untuk menangani wabah ini," ujar Jokowi saat konferensi pers yang disiarkan langsung di YouTube Setpres, Kamis (1/7).'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ID_DetailTrack_Image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

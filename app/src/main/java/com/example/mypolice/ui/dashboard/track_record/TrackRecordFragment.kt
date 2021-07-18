@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mypolice.R
 import com.example.mypolice.databinding.FragmentHaloPolBinding
@@ -28,19 +29,26 @@ class TrackRecordFragment : MyFragment<FragmentTrackRecordBinding>(R.layout.frag
         val adapterUp = TrackRecordAdapterUp()
         val adapterDown = TrackRecordAdapterDown()
         mTrackViewModel = ViewModelProvider(this).get(TrackRecordViewModel::class.java)
-
+binding.simmerView.startShimmer()
+binding.simmerView2.startShimmer()
         binding.IDTrackRecyclerviewUp.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         binding.IDTrackRecyclerviewUp.adapter =adapterUp
         binding.IDTrackRecyclerviewDown.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         binding.IDTrackRecyclerviewDown.adapter =adapterDown
-        mTrackViewModel.getData().observe(viewLifecycleOwner, Observer {
+        mTrackViewModel.trackData.observe(viewLifecycleOwner, Observer {
+            binding.simmerView.startShimmer()
+            binding.simmerView.visibility =View.GONE
+            binding.simmerView2.startShimmer()
+            binding.simmerView2.visibility =View.GONE
             Log.d("TrackFrag",it.toString())
-            Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
             adapterUp.setData(it)
             adapterUp.notifyDataSetChanged()
             adapterDown.setData(it)
             adapterDown.notifyDataSetChanged()
         })
+        binding.IDHaloBtnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_trackRecordFragment_to_dashboardFragment)
+        }
 
     }
 

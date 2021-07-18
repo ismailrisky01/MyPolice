@@ -5,15 +5,20 @@
         android:id="@+id/dashboardFragment"
         android:icon="@drawable/ic_baseline_home_24"
         android:label="Dashboard"
-        android:title="Item" />
+        android:title="DashBoard" />
+    <item
+        android:id="@+id/listContactFragment"
+        android:icon="@drawable/ic_baseline_call_24"
+        android:label="Call"
+        android:title="Call" />
     <item
         android:id="@+id/chatFragment"
         android:icon="@drawable/ic_baseline_chat_24"
         android:label="Chat"
-        android:title="Item" />
+        android:title="Chat" />
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_baseline_account_circle_24"
         android:label="Profile"
-        android:title="Item" />
+        android:title="Profil" />
 </menu>

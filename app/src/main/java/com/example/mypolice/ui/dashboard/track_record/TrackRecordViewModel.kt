@@ -16,12 +16,6 @@ class TrackRecordViewModel(application: Application) : AndroidViewModel(applicat
         trackData = repository.readTrackData()
 
     }
-    fun getData():LiveData<MutableList<ModelTrackRecord>>{
-        val mutableData= MutableLiveData<MutableList<ModelTrackRecord>>()
-        repository.readTrackData().observeForever {
-            mutableData.value =it
-        }
-        return mutableData
-    }
+
 
 }
