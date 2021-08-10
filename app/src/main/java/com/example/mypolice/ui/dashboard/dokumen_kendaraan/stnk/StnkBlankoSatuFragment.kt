@@ -12,5 +12,6 @@ class StnkBlankoSatuFragment : MyFragment<FragmentStnkBlankoSatuBinding>(R.layou
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.IDStnkBlankoSatuBtnCekData.setOnClickListener { findNavController().navigate(R.id.action_stnkBlankoSatuFragment_to_stnkBlankoDuaFragment) }
+        binding.IDSTNKBlankoSatuBtnBack.setOnClickListener { findNavController().popBackStack() }
     }
 }

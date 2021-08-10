@@ -14,5 +14,11 @@ class stnkBlankoDuaFragment : MyFragment<FragmentStnkBlankoDuaBinding>(R.layout.
         binding.IDStnkBlankoDuaBtnLanjut.setOnClickListener {
             findNavController().navigate(R.id.action_stnkBlankoDuaFragment_to_stnkBlankoTigaFragment)
         }
+        binding.IDSTNKBlankoDuaBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+        binding.IDStnkBlankoDuaBtnBackBawah.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }

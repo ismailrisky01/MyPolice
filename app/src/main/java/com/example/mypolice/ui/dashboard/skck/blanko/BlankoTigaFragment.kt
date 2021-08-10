@@ -25,7 +25,7 @@ class BlankoTigaFragment : MyFragment<FragmentBlankoTigaBinding>(R.layout.fragme
             setDataBlankoTiga()
         }
         binding.IDBlankoTigaBtnBack.setOnClickListener {
-            findNavController().navigate(R.id.action_blankoTigaFragment_to_blankoDuaFragment)
+            findNavController().popBackStack()
 
         }
         binding.IDBlankoTigaBtnLanjut.setOnClickListener {
@@ -35,7 +35,6 @@ class BlankoTigaFragment : MyFragment<FragmentBlankoTigaBinding>(R.layout.fragme
 
     fun setDataBlankoTiga() {
         val namaSd = binding.IDBlankoTigaEdtNamaSd.text.toString()
-
         val kotaSd = binding.IDBlankoTigaEdtKotaSd.text.toString()
         val tahunSd = binding.IDBlankoTigaEdtTahunSd.text.toString()
 

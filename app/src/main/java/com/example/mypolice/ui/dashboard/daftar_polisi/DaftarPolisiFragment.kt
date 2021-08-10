@@ -23,6 +23,9 @@ class DaftarPolisiFragment: MyFragment<FragmentDaftarPolisiBinding>(R.layout.fra
         binding.IDDaftarPolisiBtnTugas.setOnClickListener {
             findNavController().navigate(R.id.action_daftarPolisiFragment2_to_daftarPolisiTugasDanFungsiFragment)
         }
+        binding.IDDaftarPolisiBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 }

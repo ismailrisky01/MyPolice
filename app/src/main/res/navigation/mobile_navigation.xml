@@ -109,6 +109,12 @@
         <action
             android:id="@+id/action_haloPolFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_haloPolFragment_to_covidFormLaporanFragment"
+            app:destination="@id/covidFormLaporanFragment" />
+        <action
+            android:id="@+id/action_haloPolFragment_to_pemadamListFragment"
+            app:destination="@id/pemadamListFragment" />
     </fragment>
     <fragment
         android:id="@+id/dokumenKendaraanFragment"
@@ -141,7 +147,17 @@
         android:id="@+id/monitorFragment"
         android:name="com.example.mypolice.ui.dashboard.sensor.MonitorFragment"
         android:label="fragment_monitor"
-        tools:layout="@layout/fragment_monitor" />
+        tools:layout="@layout/fragment_monitor" >
+        <action
+            android:id="@+id/action_monitorFragment_to_sensorGuideFragment"
+            app:destination="@id/sensorGuideFragment" />
+        <action
+            android:id="@+id/action_monitorFragment_to_sensorMonitorFragment"
+            app:destination="@id/sensorMonitorFragment" />
+        <action
+            android:id="@+id/action_monitorFragment_to_scannerQrFragment"
+            app:destination="@id/scannerQrFragment" />
+    </fragment>
     <fragment
         android:id="@+id/SKCKFragment"
         android:name="com.example.mypolice.ui.dashboard.skck.SKCKFragment"
@@ -150,6 +166,12 @@
         <action
             android:id="@+id/action_SKCKFragment_to_blankoSatuFragment"
             app:destination="@id/blankoSatuFragment" />
+        <action
+            android:id="@+id/action_SKCKFragment_to_kodePendaftaranFragment"
+            app:destination="@id/kodePendaftaranFragment" />
+        <action
+            android:id="@+id/action_SKCKFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/ETilangFragment"
@@ -285,7 +307,7 @@
         tools:layout="@layout/fragment_blanko_lima" />
     <fragment
         android:id="@+id/tentangEtleFragment"
-        android:name="com.example.mypolice.TentangEtleFragment"
+        android:name="com.example.mypolice.ui.dashboard.e_tilang.TentangEtleFragment"
         android:label="fragment_tentang_etle"
         tools:layout="@layout/fragment_tentang_etle" >
         <action
@@ -297,12 +319,12 @@
     </fragment>
     <fragment
         android:id="@+id/brivaFragment"
-        android:name="com.example.mypolice.BrivaFragment"
+        android:name="com.example.mypolice.ui.dashboard.e_tilang.BrivaFragment"
         android:label="fragment_briva"
         tools:layout="@layout/fragment_briva" />
     <fragment
         android:id="@+id/mekanismeEtleFragment"
-        android:name="com.example.mypolice.MekanismeEtleFragment"
+        android:name="com.example.mypolice.ui.dashboard.e_tilang.MekanismeEtleFragment"
         android:label="fragment_mekanisme_etle"
         tools:layout="@layout/fragment_mekanisme_etle" />
     <fragment
@@ -341,7 +363,7 @@
         tools:layout="@layout/fragment_daftar_polisi_informasi_dan_link" />
     <fragment
         android:id="@+id/daftarPolisiTugasDanFungsiFragment"
-        android:name="com.example.mypolice.DaftarPolisiTugasDanFungsiFragment"
+        android:name="com.example.mypolice.ui.dashboard.daftar_polisi.tugas.DaftarPolisiTugasDanFungsiFragment"
         android:label="fragment_daftar_polisi_tugas_dan_fungsi"
         tools:layout="@layout/fragment_daftar_polisi_tugas_dan_fungsi" />
     <fragment
@@ -430,6 +452,15 @@
         <action
             android:id="@+id/action_bpkbFragment_to_bpkbProsedurFragment"
             app:destination="@id/bpkbProsedurFragment" />
+        <action
+            android:id="@+id/action_bpkbFragment_to_bpkbPelayananSaturagment2"
+            app:destination="@id/bpkbPelayananSaturagment2" />
+        <action
+            android:id="@+id/action_bpkbFragment_to_bpkbPelayananDuaFragment"
+            app:destination="@id/bpkbPelayananDuaFragment" />
+        <action
+            android:id="@+id/action_bpkbFragment_to_bpkbPelayananTigaFragment"
+            app:destination="@id/bpkbPelayananTigaFragment" />
     </fragment>
     <fragment
         android:id="@+id/bpkbRegistrasiFragment"
@@ -443,12 +474,60 @@
         tools:layout="@layout/fragment_bpkb_prosedur" />
     <fragment
         android:id="@+id/covidFormLaporanFragment"
-        android:name="com.example.mypolice.CovidFormLaporanFragment"
+        android:name="com.example.mypolice.ui.dashboard.halo_polisi.covid.CovidFormLaporanFragment"
         android:label="fragment_covid_form_laporan"
         tools:layout="@layout/fragment_covid_form_laporan" />
     <fragment
         android:id="@+id/covidGejalaFragment"
-        android:name="com.example.mypolice.CovidGejalaFragment"
+        android:name="com.example.mypolice.ui.dashboard.halo_polisi.covid.CovidGejalaFragment"
         android:label="fragment_covid_gejala"
         tools:layout="@layout/fragment_covid_gejala" />
+    <fragment
+        android:id="@+id/bpkbPelayananDuaFragment"
+        android:name="com.example.mypolice.ui.dashboard.dokumen_kendaraan.bpkb.BpkbPelayananDuaFragment"
+        android:label="fragment_bpkb_pelayanan_dua"
+        tools:layout="@layout/fragment_bpkb_pelayanan_dua" />
+    <fragment
+        android:id="@+id/bpkbPelayananSaturagment2"
+        android:name="com.example.mypolice.ui.dashboard.dokumen_kendaraan.bpkb.BpkbPelayananSaturagment"
+        android:label="fragment_bpkb_pelayanan_satu"
+        tools:layout="@layout/fragment_bpkb_pelayanan_satu" />
+    <fragment
+        android:id="@+id/bpkbPelayananTigaFragment"
+        android:name="com.example.mypolice.ui.dashboard.dokumen_kendaraan.bpkb.BpkbPelayananTigaFragment"
+        android:label="fragment_bpkb_pelayanan_tiga"
+        tools:layout="@layout/fragment_bpkb_pelayanan_tiga" />
+    <fragment
+        android:id="@+id/sensorGuideFragment"
+        android:name="com.example.mypolice.SensorGuideFragment"
+        android:label="fragment_sensor_guide"
+        tools:layout="@layout/fragment_sensor_guide" />
+    <fragment
+        android:id="@+id/sensorMonitorFragment"
+        android:name="com.example.mypolice.SensorMonitorFragment"
+        android:label="fragment_sensor_monitor"
+        tools:layout="@layout/fragment_sensor_monitor" />
+    <fragment
+        android:id="@+id/kodePendaftaranFragment"
+        android:name="com.example.mypolice.ui.dashboard.skck.KodePendaftaranFragment"
+        android:label="fragment_kode_pendaftaran"
+        tools:layout="@layout/fragment_kode_pendaftaran" >
+        <action
+            android:id="@+id/action_kodePendaftaranFragment_to_blankoSatuFragment"
+            app:destination="@id/blankoSatuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pemadamListFragment"
+        android:name="com.example.mypolice.ui.dashboard.halo_polisi.pemadam.PemadamListFragment"
+        android:label="fragment_pemadam_list"
+        tools:layout="@layout/fragment_pemadam_list" >
+        <action
+            android:id="@+id/action_pemadamListFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerQrFragment"
+        android:name="com.example.mypolice.ui.dashboard.sensor.ScannerQrFragment"
+        android:label="ScannerQrFragment"
+        tools:layout="@layout/fragment_scanner_qr"/>
 </navigation>

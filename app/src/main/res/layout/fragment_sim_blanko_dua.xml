@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView21"
+                android:id="@+id/ID_DaftarPolisi_BtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
@@ -34,218 +34,252 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SIM"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintStart_toEndOf="@+id/ID_DaftarPolisi_BtnBack"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="10dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar1">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/textView148"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/textView149"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/textView150"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/textView151"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
-        <RadioGroup
-            android:id="@+id/radioGroup3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/textView146"
-            app:layout_constraintTop_toBottomOf="@+id/textView145">
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SIM Baru" />
-
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Perpanjangan SIM" />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/radioGroup4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/textView147"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup3">
-
-            <RadioButton
-                android:id="@+id/radioButton7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SIM A" />
-
-            <RadioButton
-                android:id="@+id/radioButton8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SIM C" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/textView143"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pendafataran SIM Online"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar1">
 
-        <TextView
-            android:id="@+id/textView145"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Data Permohonan"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView143" />
+            <EditText
+                android:id="@+id/ID_SIMBlankoDua_EdtAlamatEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView148"
+                app:layout_constraintTop_toBottomOf="@+id/ID_SimBlankoDua_GolonganSIM" />
 
-        <TextView
-            android:id="@+id/textView146"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Jenis Permohonan*"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/radioGroup3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radioGroup3" />
+            <EditText
+                android:id="@+id/ID_SIMBlankoDua_EdtPoldaKedatangan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView149"
+                app:layout_constraintTop_toBottomOf="@+id/ID_SIMBlankoDua_EdtAlamatEmail" />
 
-        <TextView
-            android:id="@+id/textView147"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Golongan SIM*"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/radioGroup4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radioGroup4" />
+            <EditText
+                android:id="@+id/ID_SIMBlankoDua_EdtSatpasKedatangan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView150"
+                app:layout_constraintTop_toBottomOf="@+id/ID_SIMBlankoDua_EdtPoldaKedatangan" />
 
-        <TextView
-            android:id="@+id/textView148"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Alamat Email"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3" />
+            <EditText
+                android:id="@+id/ID_SIMBlankoDua_EdtAlamatSatpasKedatangan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView151"
+                app:layout_constraintTop_toBottomOf="@+id/ID_SIMBlankoDua_EdtSatpasKedatangan" />
 
-        <TextView
-            android:id="@+id/textView149"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="POLDA kedatangan*"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4" />
+            <RadioGroup
+                android:id="@+id/ID_SimBlankoDua_JenisPemohon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textView146"
+                app:layout_constraintTop_toBottomOf="@+id/textView145">
 
-        <TextView
-            android:id="@+id/textView150"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="SATPAS kedatangan*"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName5" />
+                <RadioButton
+                    android:id="@+id/Baru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="SIM Baru" />
 
-        <TextView
-            android:id="@+id/textView151"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Alamat SATPAS Kedatangan*"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName6" />
+                <RadioButton
+                    android:id="@+id/Perpanjang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perpanjangan SIM" />
+            </RadioGroup>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Next"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <RadioGroup
+                android:id="@+id/ID_SimBlankoDua_GolonganSIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textView147"
+                app:layout_constraintTop_toBottomOf="@+id/ID_SimBlankoDua_JenisPemohon">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button3" />
+                <RadioButton
+                    android:id="@+id/SIMA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="SIM A" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <RadioButton
+                    android:id="@+id/SIMC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SIM C" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView143"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendafataran SIM Online"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Data Permohonan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView37" />
+
+            <TextView
+                android:id="@+id/textView146"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Jenis Permohonan*"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SimBlankoDua_JenisPemohon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SimBlankoDua_JenisPemohon" />
+
+            <TextView
+                android:id="@+id/textView147"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Golongan SIM*"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SimBlankoDua_GolonganSIM"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SimBlankoDua_GolonganSIM" />
+
+            <TextView
+                android:id="@+id/textView148"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Alamat Email"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SIMBlankoDua_EdtAlamatEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SIMBlankoDua_EdtAlamatEmail" />
+
+            <TextView
+                android:id="@+id/textView149"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="POLDA kedatangan*"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SIMBlankoDua_EdtPoldaKedatangan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SIMBlankoDua_EdtPoldaKedatangan" />
+
+            <TextView
+                android:id="@+id/textView150"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="SATPAS kedatangan*"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SIMBlankoDua_EdtSatpasKedatangan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SIMBlankoDua_EdtSatpasKedatangan" />
+
+            <TextView
+                android:id="@+id/textView151"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Alamat SATPAS Kedatangan*"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ID_SIMBlankoDua_EdtAlamatSatpasKedatangan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ID_SIMBlankoDua_EdtAlamatSatpasKedatangan" />
+
+            <Button
+                android:id="@+id/ID_BlankoDua_BtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView151" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ID_DaftarPolisi_BtnBack2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/teal_200"
+                android:text="Back"
+                app:layout_constraintEnd_toStartOf="@+id/ID_BlankoDua_BtnNext"
+                app:layout_constraintTop_toTopOf="@+id/ID_BlankoDua_BtnNext" />
+
+            <ImageView
+                android:id="@+id/imageView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView143"
+                app:srcCompat="@drawable/image30" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

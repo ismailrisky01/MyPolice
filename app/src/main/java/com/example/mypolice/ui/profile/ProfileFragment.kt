@@ -43,9 +43,11 @@ class ProfileFragment : MyFragment<FragmentProfileBinding>(R.layout.fragment_pro
         super.onViewCreated(view, savedInstanceState)
         mProfileViewmodel = ViewModelProvider(this).get(ProfileViewModel::class.java)
         setData()
+        val myshared = SharedPref(requireContext())
+        val ktp =myshared.getDataUser().noKTP
         binding.IDProfileImageUser.setOnClickListener { getImage() }
         binding.IDProfileNamaUser.text = user.displayName
-        binding.IDProfileBtnSetting.setOnClickListener {
+        binding.IDProfileBtnLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
         }
@@ -105,7 +107,6 @@ class ProfileFragment : MyFragment<FragmentProfileBinding>(R.layout.fragment_pro
                     }
                 })
             } else {
-
                 FirebaseStorage.getInstance().getReferenceFromUrl(imageUser).delete()
                     .addOnSuccessListener {
                         uploadImage(selectedPhotoUri).observe(viewLifecycleOwner, Observer {
@@ -136,6 +137,8 @@ class ProfileFragment : MyFragment<FragmentProfileBinding>(R.layout.fragment_pro
     fun setData() {
 
         mProfileViewmodel.getDataProfile(requireContext()).observe(viewLifecycleOwner, Observer {
+            val myPref = SharedPref(requireContext())
+            myPref.setDataUser(it)
             logD("Try Get Data Profile")
             if (it.imageProfile == "") {
 

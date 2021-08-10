@@ -26,6 +26,9 @@ class ETilangFragment : MyFragment<FragmentETilangBinding>(R.layout.fragment_e_t
         binding.IDETilangBtnCaraBayar.setOnClickListener {
             findNavController().navigate(R.id.action_ETilangFragment_to_brivaFragment)
         }
+        binding.IDETilangBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 

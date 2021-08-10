@@ -5,56 +5,104 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.mypolice.R
+import com.example.mypolice.databinding.FragmentSimBlankoDuaBinding
+import com.example.mypolice.databinding.FragmentSimBlankoSatuBinding
+import com.example.mypolice.model.DataPermohonSim
+import com.example.mypolice.utils.LoadingHelper
+import com.example.mypolice.utils.MyFragment
+import com.example.mypolice.utils.SharedPref
+import es.dmoral.toasty.Toasty
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class SimBlankoDuaFragment :
+    MyFragment<FragmentSimBlankoDuaBinding>(R.layout.fragment_sim_blanko_dua) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SimBlankoDuaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SimBlankoDuaFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        getData()
+        binding.IDDaftarPolisiBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+        binding.IDDaftarPolisiBtnBack2.setOnClickListener {
+            findNavController().popBackStack()
+        }
+        binding.IDBlankoDuaBtnNext.setOnClickListener {
+            saveData()
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sim_blanko_dua, container, false)
+    fun getData() {
+        val mypref = SharedPref(requireContext()).getDataSimDataPemohon()
+        if (mypref.jenisPermohonan == "SIM Baru") {
+            binding.Baru.isChecked = true
+            binding.Perpanjang.isChecked = false
+        } else if (mypref.jenisPermohonan == "Perpanjang SIM") {
+            binding.Baru.isChecked = false
+            binding.Perpanjang.isChecked = true
+        }
+
+        if (mypref.golonganSim == "SIM A") {
+            binding.SIMA.isChecked = true
+            binding.SIMC.isChecked = false
+        } else if (mypref.golonganSim == "SIM C") {
+            binding.SIMA.isChecked = false
+            binding.SIMC.isChecked = true
+        }
+
+        binding.IDSIMBlankoDuaEdtAlamatEmail.setText(mypref.alamatEmail)
+        binding.IDSIMBlankoDuaEdtPoldaKedatangan.setText(mypref.poldaKedatangan)
+        binding.IDSIMBlankoDuaEdtSatpasKedatangan.setText(mypref.satpasKedatangan)
+        binding.IDSIMBlankoDuaEdtAlamatSatpasKedatangan.setText(mypref.alamatSatpas)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SimBlankoDuaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SimBlankoDuaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    fun saveData() {
+        val loading = LoadingHelper(requireContext())
+
+        loading.show()
+        val jenisPemohon: String
+        val radioSIM =
+            resources.getResourceEntryName(binding.IDSimBlankoDuaJenisPemohon.checkedRadioButtonId)
+        if (radioSIM == "Baru") {
+            jenisPemohon = "SIM Baru"
+        } else {
+            jenisPemohon = "Perpanjang SIM"
+        }
+
+
+        val golonganSIM: String
+        val radioGolo = resources.getResourceEntryName(binding.IDSimBlankoDuaGolonganSIM.checkedRadioButtonId)
+                if (radioGolo == "SIMA") {
+                    golonganSIM = "SIM A"
+                } else {
+                    golonganSIM = "SIM C"
                 }
-            }
+
+        val alamatEmail = binding.IDSIMBlankoDuaEdtAlamatEmail.text.toString()
+        val poldaKedatangan = binding.IDSIMBlankoDuaEdtPoldaKedatangan.text.toString()
+        val satpasKedat = binding.IDSIMBlankoDuaEdtSatpasKedatangan.text.toString()
+        val alamatSatpas = binding.IDSIMBlankoDuaEdtAlamatSatpasKedatangan.text.toString()
+
+        if (jenisPemohon != "" && golonganSIM != "" && alamatEmail != "" && poldaKedatangan != "" && satpasKedat != "" && alamatSatpas != "") {
+            val myshred = SharedPref(requireContext())
+            myshred.setDataSimDataPemohon(
+                DataPermohonSim(
+                    jenisPemohon,
+                    golonganSIM,
+                    alamatEmail,
+                    poldaKedatangan,
+                    satpasKedat,
+                    alamatSatpas
+                )
+            )
+            loading.dismiss()
+            Toasty.success(requireContext(), "Data Saved", Toasty.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_simBlankoDuaFragment_to_simBlankoTigaFragment)
+
+        } else {
+            loading.dismiss()
+            Toasty.warning(requireContext(), "Please FIll all filed", Toasty.LENGTH_SHORT).show()
+        }
     }
+
 }

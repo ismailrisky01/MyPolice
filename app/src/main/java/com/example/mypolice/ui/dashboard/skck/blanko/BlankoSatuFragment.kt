@@ -8,11 +8,14 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.datetime.datePicker
 import com.example.mypolice.R
 import com.example.mypolice.databinding.FragmentBlankoSatuBinding
 import com.example.mypolice.model.ModelBlankoSatu
 import com.example.mypolice.utils.MyFragment
 import com.example.mypolice.utils.SharedPref
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -22,17 +25,30 @@ class BlankoSatuFragment : MyFragment<FragmentBlankoSatuBinding>(R.layout.fragme
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        init()
-
+        data()
         binding.IDBlankoSatuBtnLanjut.setOnClickListener {
             findNavController().navigate(R.id.action_blankoSatuFragment_to_blankoDuaFragment)
         }
         binding.IDBlankoSatuBtnSimpan.setOnClickListener {
             setDataBlanko()
         }
+        binding.IDBlankoSatuBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+        binding.IDBlankoSatuBtnTanggalLahir.setOnClickListener {
+            MaterialDialog(requireActivity()).show {
+                datePicker { _, date ->
+                    val myFormat = "MM/dd/yyyy" // mention the format you need
+                    val sdf = SimpleDateFormat(myFormat, Locale.US)
+                    val date = sdf.format(date.time)
+                    binding.IDBlankoSatuTanggalLahir.setText("$date")
+                }
+            }
+        }
     }
 
-    fun init() {
+
+    fun data() {
         getDataBlanko()
         val locales: Array<Locale> = Locale.getAvailableLocales()
         val countries = ArrayList<String>()
@@ -59,16 +75,16 @@ class BlankoSatuFragment : MyFragment<FragmentBlankoSatuBinding>(R.layout.fragme
         binding.IDBlankoSatuTanggalLahir.setText(myPreference.getDataBlankoSatu().tanggalLahir)
         binding.IDBlankoSatuRgAgama.setText(myPreference.getDataBlankoSatu().agama)
         binding.IDBlankoSatuEdtKebngsaan.setText(myPreference.getDataBlankoSatu().kebangsaan)
-        if(myPreference.getDataBlankoSatu().jenisKelamin=="Laki-Laki"){
+        if (myPreference.getDataBlankoSatu().jenisKelamin == "Laki-Laki") {
             binding.Laki.isChecked = true
-        }else{
+        } else {
             binding.Laki.isChecked = false
             binding.Perempuan.isChecked = true
         }
 
-        if(myPreference.getDataBlankoSatu().status=="Kawin"){
+        if (myPreference.getDataBlankoSatu().status == "Kawin") {
             binding.Kawin.isChecked = true
-        }else{
+        } else {
             binding.Kawin.isChecked = false
             binding.Tidak.isChecked = true
         }
@@ -142,6 +158,6 @@ class BlankoSatuFragment : MyFragment<FragmentBlankoSatuBinding>(R.layout.fragme
 
     override fun onResume() {
         super.onResume()
-        init()
+
     }
 }

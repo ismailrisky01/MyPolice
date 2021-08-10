@@ -20,6 +20,18 @@ class SKCKFragment : MyFragment<FragmentSKCKBinding>(R.layout.fragment_s_k_c_k) 
         binding.IDSKSCBtnIsiBlanko.setOnClickListener {
             findNavController().navigate(R.id.action_SKCKFragment_to_blankoSatuFragment)
         }
+        binding.IDSKSCBtnCetakKode.setOnClickListener {
+            findNavController().navigate(R.id.action_SKCKFragment_to_kodePendaftaranFragment)
+        }
+        binding.IDSKSCBtnDatangKePolres.setOnClickListener {
+            val bundle=Bundle()
+            bundle.putString("key","police")
+            bundle.putString("name","polsek")
+            findNavController().navigate(R.id.action_SKCKFragment_to_mapsFragment,bundle)
+        }
+        binding.IDSKCKBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 }

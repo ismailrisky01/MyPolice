@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/ID_Halo_BtnBack"
+                android:id="@+id/ID_DetailTrack_BtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
@@ -34,11 +34,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Track Record"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ID_Halo_BtnBack"
+                app:layout_constraintStart_toEndOf="@+id/ID_DetailTrack_BtnBack"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -68,6 +69,7 @@
                 android:id="@+id/ID_DetailTrack_TxtJudul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Dukung PPKM Darurat, Kapolri Minta Jajaran  Siapkan Strategi Penyekatan"
                 android:textAlignment="center"
                 android:textColor="#000000"

@@ -1,16 +1,14 @@
 package com.example.mypolice.utils
 
 import android.content.Context
-import com.example.mypolice.model.ModelBlankoDua
-import com.example.mypolice.model.ModelBlankoSatu
-import com.example.mypolice.model.ModelBlankoTiga
-import com.example.mypolice.model.ModelUser
+import com.example.mypolice.model.*
 
 class SharedPref(context: Context) {
+    var tinyDB = TinyDB(context)
 
-    private  val idSharedPrefUser = "User"
+    private val idSharedPrefUser = "User"
     private val idUidKey = "idUserKey"
-    private val imageUserKey ="imageUserKey"
+    private val imageUserKey = "imageUserKey"
     private val namaUserKey = "namaUserKey"
     private val ttlUserKey = "ttlUserKey"
     private val alamatUserKey = "alamatUserKey"
@@ -21,20 +19,20 @@ class SharedPref(context: Context) {
     private val sharedUser_id = context.getSharedPreferences(idSharedPrefUser, Context.MODE_PRIVATE)
 
 
-    fun setDataUser(modelUser: ModelUser){
+    fun setDataUser(modelUser: ModelUser) {
         val data = sharedUser_id.edit()
-        data.putString(idUidKey,modelUser.IdUser)
-        data.putString(imageUserKey,modelUser.imageProfile)
-        data.putString(namaUserKey,modelUser.nama)
-        data.putString(ttlUserKey,modelUser.ttl)
-        data.putString(alamatUserKey,modelUser.alamat)
-        data.putString(ktpUserKey,modelUser.noKTP)
-        data.putString(simUserKey,modelUser.noSIM)
-        data.putString(stnkUserKey,modelUser.noRegistrasiSTNK)
+        data.putString(idUidKey, modelUser.IdUser)
+        data.putString(imageUserKey, modelUser.imageProfile)
+        data.putString(namaUserKey, modelUser.nama)
+        data.putString(ttlUserKey, modelUser.ttl)
+        data.putString(alamatUserKey, modelUser.alamat)
+        data.putString(ktpUserKey, modelUser.noKTP)
+        data.putString(simUserKey, modelUser.noSIM)
+        data.putString(stnkUserKey, modelUser.noRegistrasiSTNK)
         data.apply()
     }
 
-    fun getDataUser():ModelUser{
+    fun getDataUser(): ModelUser {
         val uidUser = sharedUser_id.getString(idUidKey, "").toString()
         val imageUser = sharedUser_id.getString(imageUserKey, "").toString()
         val namaUser = sharedUser_id.getString(namaUserKey, "").toString()
@@ -43,7 +41,8 @@ class SharedPref(context: Context) {
         val ktpUser = sharedUser_id.getString(ktpUserKey, "").toString()
         val simUser = sharedUser_id.getString(simUserKey, "").toString()
         val stnkUser = sharedUser_id.getString(stnkUserKey, "").toString()
-        val data = ModelUser(uidUser,imageUser,namaUser,ttlUser,alamatUser,ktpUser,simUser,stnkUser)
+        val data =
+            ModelUser(uidUser, imageUser, namaUser, ttlUser, alamatUser, ktpUser, simUser, stnkUser)
         return data
 
     }
@@ -132,48 +131,51 @@ class SharedPref(context: Context) {
     private val statusIbuKey = "statusIbuKey"
     private val pekerjaanIbuKey = "pekerjaanIbuKey"
     private val alamatIbuKey = "alamatIbuKey"
+    private val dataSaudaraKey = "dataSaudaraKey"
     private val sharedBlankoDua_id =
         context.getSharedPreferences(idSharedPrefBlankoDua, Context.MODE_PRIVATE)
 
     fun setDataBlankoDua(modelBlankoDua: ModelBlankoDua) {
-        val data = sharedBlankoDua_id.edit()
-        data.putString(namaBapakKey, modelBlankoDua.namaBapak)
-        data.putString(tempatLahirBapakKey, modelBlankoDua.tempatLahirAyah)
-        data.putString(tanggalLahirBapakKey, modelBlankoDua.tanggalLahirAyah)
-        data.putString(agamaBapakKey, modelBlankoDua.agamaBapak)
-        data.putString(kebangsaanBapakKey, modelBlankoDua.kebangsaanBapak)
-        data.putString(statusBapakKey, modelBlankoDua.statusBapak)
-        data.putString(pekerjaanBapakKey, modelBlankoDua.pekerjaanBapak)
-        data.putString(alamatBapakKey, modelBlankoDua.alamatBapak)
+        tinyDB.putString(namaBapakKey, modelBlankoDua.namaBapak)
+        tinyDB.putString(tempatLahirBapakKey, modelBlankoDua.tempatLahirAyah)
+        tinyDB.putString(tanggalLahirBapakKey, modelBlankoDua.tanggalLahirAyah)
+        tinyDB.putString(agamaBapakKey, modelBlankoDua.agamaBapak)
+        tinyDB.putString(kebangsaanBapakKey, modelBlankoDua.kebangsaanBapak)
+        tinyDB.putString(statusBapakKey, modelBlankoDua.statusBapak)
+        tinyDB.putString(pekerjaanBapakKey, modelBlankoDua.pekerjaanBapak)
+        tinyDB.putString(alamatBapakKey, modelBlankoDua.alamatBapak)
 
-        data.putString(namaIbuKey, modelBlankoDua.namaIbu)
-        data.putString(tempatLahirIbuKey, modelBlankoDua.tempatLahirIbu)
-        data.putString(tanggalLahirIbuKey, modelBlankoDua.tanggalLahirIbu)
-        data.putString(agamaIbuKey, modelBlankoDua.agamaIbu)
-        data.putString(kebangsaanIbuKey, modelBlankoDua.kebangsaanIbu)
-        data.putString(statusIbuKey, modelBlankoDua.statusIbu)
-        data.putString(pekerjaanIbuKey, modelBlankoDua.pekerjaanIbu)
-        data.putString(alamatIbuKey, modelBlankoDua.alamatIbu)
-        data.apply()
+        tinyDB.putString(namaIbuKey, modelBlankoDua.namaIbu)
+        tinyDB.putString(tempatLahirIbuKey, modelBlankoDua.tempatLahirIbu)
+        tinyDB.putString(tanggalLahirIbuKey, modelBlankoDua.tanggalLahirIbu)
+        tinyDB.putString(agamaIbuKey, modelBlankoDua.agamaIbu)
+        tinyDB.putString(kebangsaanIbuKey, modelBlankoDua.kebangsaanIbu)
+        tinyDB.putString(statusIbuKey, modelBlankoDua.statusIbu)
+        tinyDB.putString(pekerjaanIbuKey, modelBlankoDua.pekerjaanIbu)
+        tinyDB.putString(alamatIbuKey, modelBlankoDua.alamatIbu)
+        tinyDB.putListObject(dataSaudaraKey, modelBlankoDua.dataSaudara)
+        tinyDB.apply { }
+
     }
 
     fun getDataBlankoDua(): ModelBlankoDua {
-        val namaBapak = sharedBlankoDua_id.getString(namaBapakKey, "").toString()
-        val tempatLahirBapak = sharedBlankoDua_id.getString(tempatLahirBapakKey, "").toString()
-        val tanggalLahirBapak = sharedBlankoDua_id.getString(tanggalLahirBapakKey, "").toString()
-        val agamaBapak = sharedBlankoDua_id.getString(agamaBapakKey, "").toString()
-        val kebangsaanBapak = sharedBlankoDua_id.getString(kebangsaanBapakKey, "").toString()
-        val statusBapak = sharedBlankoDua_id.getString(statusBapakKey, "").toString()
-        val pekerjaanBapak = sharedBlankoDua_id.getString(pekerjaanBapakKey, "").toString()
-        val alamatBapak = sharedBlankoDua_id.getString(alamatBapakKey, "").toString()
-        val namaIbu = sharedBlankoDua_id.getString(namaIbuKey, "").toString()
-        val tempatLahirIbu = sharedBlankoDua_id.getString(tempatLahirIbuKey, "").toString()
-        val tanggalLahirIbu = sharedBlankoDua_id.getString(tanggalLahirIbuKey, "").toString()
-        val agamaIbu = sharedBlankoDua_id.getString(agamaIbuKey, "").toString()
-        val kebangsaanIbu = sharedBlankoDua_id.getString(kebangsaanIbuKey, "").toString()
-        val statusIbu = sharedBlankoDua_id.getString(statusIbuKey, "").toString()
-        val pekerjaanIbu = sharedBlankoDua_id.getString(pekerjaanIbuKey, "").toString()
-        val alamatIbu = sharedBlankoDua_id.getString(alamatIbuKey, "").toString()
+        val namaBapak = tinyDB.getString(namaBapakKey) as String
+        val tempatLahirBapak = tinyDB.getString(tempatLahirBapakKey) as String
+        val tanggalLahirBapak = tinyDB.getString(tanggalLahirBapakKey) as String
+        val agamaBapak = tinyDB.getString(agamaBapakKey) as String
+        val kebangsaanBapak = tinyDB.getString(kebangsaanBapakKey) as String
+        val statusBapak = tinyDB.getString(statusBapakKey) as String
+        val pekerjaanBapak = tinyDB.getString(pekerjaanBapakKey) as String
+        val alamatBapak = tinyDB.getString(alamatBapakKey) as String
+        val namaIbu = tinyDB.getString(namaIbuKey) as String
+        val tempatLahirIbu = tinyDB.getString(tempatLahirIbuKey) as String
+        val tanggalLahirIbu = tinyDB.getString(tanggalLahirIbuKey) as String
+        val agamaIbu = tinyDB.getString(agamaIbuKey) as String
+        val kebangsaanIbu = tinyDB.getString(kebangsaanIbuKey) as String
+        val statusIbu = tinyDB.getString(statusIbuKey) as String
+        val pekerjaanIbu = tinyDB.getString(pekerjaanIbuKey) as String
+        val alamatIbu = tinyDB.getString(alamatIbuKey) as String
+        val dataSaudara = tinyDB.getListObject(dataSaudaraKey)
 
         return ModelBlankoDua(
             namaBapak,
@@ -191,7 +193,8 @@ class SharedPref(context: Context) {
             kebangsaanIbu,
             statusIbu,
             pekerjaanIbu,
-            alamatIbu
+            alamatIbu,
+            dataSaudara
         )
     }
 
@@ -214,36 +217,36 @@ class SharedPref(context: Context) {
 
     fun setDataBlankoTiga(modelBlankoTiga: ModelBlankoTiga) {
         val data = sharedBlankoTiga_id.edit()
-        data.putString(namaSDKey, modelBlankoTiga.namaSD)
-        data.putString(kotaSDKey, modelBlankoTiga.namaSD)
-        data.putString(tahunSDKey, modelBlankoTiga.namaSD)
-        data.putString(namaSMPKey, modelBlankoTiga.namaSD)
-        data.putString(kotaSMPKey, modelBlankoTiga.namaSD)
-        data.putString(tahunSMPKey, modelBlankoTiga.namaSD)
-        data.putString(namaSMAKey, modelBlankoTiga.namaSD)
-        data.putString(kotaSMAKey, modelBlankoTiga.namaSD)
-        data.putString(tahunSMAKey, modelBlankoTiga.namaSD)
-        data.putString(namaUNIVKey, modelBlankoTiga.namaSD)
-        data.putString(kotaUNIVKey, modelBlankoTiga.namaSD)
-        data.putString(tahunUNIVKey, modelBlankoTiga.namaSD)
-        data.apply()
+        tinyDB.putString(namaSDKey, modelBlankoTiga.namaSD)
+        tinyDB.putString(kotaSDKey, modelBlankoTiga.kotaSD)
+        tinyDB.putString(tahunSDKey, modelBlankoTiga.tahunSD)
+        tinyDB.putString(namaSMPKey, modelBlankoTiga.namaSMP)
+        tinyDB.putString(kotaSMPKey, modelBlankoTiga.kotaSMP)
+        tinyDB.putString(tahunSMPKey, modelBlankoTiga.tahunSMP)
+        tinyDB.putString(namaSMAKey, modelBlankoTiga.namaSMA)
+        tinyDB.putString(kotaSMAKey, modelBlankoTiga.kotaSMA)
+        tinyDB.putString(tahunSMAKey, modelBlankoTiga.tahunSMA)
+        tinyDB.putString(namaUNIVKey, modelBlankoTiga.namaUNIV)
+        tinyDB.putString(kotaUNIVKey, modelBlankoTiga.kotaUNIV)
+        tinyDB.putString(tahunUNIVKey, modelBlankoTiga.tahunUNIV)
+        tinyDB.apply { }
 
 
     }
 
     fun getDataBlankoTiga(): ModelBlankoTiga {
-        val namaSD = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val kotaSD = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val tahunSD = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val namaSMP = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val kotaSMP = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val tahunSMP = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val namaSMA = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val kotaSMA = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val tahunSMA = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val namaUNIV = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val kotaUNIV = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
-        val tahunUNIV = sharedBlankoTiga_id.getString(namaSDKey, "").toString()
+        val namaSD = tinyDB.getString(namaSDKey).toString()
+        val kotaSD = tinyDB.getString(kotaSDKey).toString()
+        val tahunSD = tinyDB.getString(tahunSDKey).toString()
+        val namaSMP = tinyDB.getString(namaSMPKey).toString()
+        val kotaSMP = tinyDB.getString(kotaSMPKey).toString()
+        val tahunSMP = tinyDB.getString(tahunSMPKey).toString()
+        val namaSMA = tinyDB.getString(namaSMAKey).toString()
+        val kotaSMA = tinyDB.getString(kotaSMAKey).toString()
+        val tahunSMA = tinyDB.getString(tahunSMAKey).toString()
+        val namaUNIV = tinyDB.getString(namaUNIVKey).toString()
+        val kotaUNIV = tinyDB.getString(kotaUNIVKey).toString()
+        val tahunUNIV = tinyDB.getString(tahunUNIVKey).toString()
 
         val data = ModelBlankoTiga(
             namaSD,
@@ -262,5 +265,73 @@ class SharedPref(context: Context) {
         return data
     }
 
+    private val jenisPemohonKey = "jenisPemohonKey"
+    private val golonganSimKey = "golonganSimKey"
+    private val alamatEmailSIMKey = "alamatEmailSIMKey"
+    private val poldaKedatanganKey = "poldaKedatangan"
+    private val satpasKedatanganKey = "satpasKedatangan"
+    private val alamatSatpasKedatanganKey = "alamatSatpasKedatangan"
 
+    fun setDataSimDataPemohon(dataPermohonSim: DataPermohonSim) {
+        tinyDB.putString(jenisPemohonKey, dataPermohonSim.jenisPermohonan)
+        tinyDB.putString(golonganSimKey, dataPermohonSim.golonganSim)
+        tinyDB.putString(alamatEmailSIMKey, dataPermohonSim.alamatEmail)
+        tinyDB.putString(poldaKedatanganKey, dataPermohonSim.poldaKedatangan)
+        tinyDB.putString(satpasKedatanganKey, dataPermohonSim.satpasKedatangan)
+        tinyDB.putString(alamatSatpasKedatanganKey, dataPermohonSim.alamatSatpas)
+    }
+
+    fun getDataSimDataPemohon(): DataPermohonSim {
+        val jenisPemohon = tinyDB.getString(jenisPemohonKey) as String
+        val golonganSim = tinyDB.getString(golonganSimKey) as String
+        val alamatEmail = tinyDB.getString(alamatEmailSIMKey) as String
+        val poldaKedatangan = tinyDB.getString(poldaKedatanganKey) as String
+        val satpasKedatangan = tinyDB.getString(satpasKedatanganKey) as String
+        val alamatSatpas = tinyDB.getString(alamatSatpasKedatanganKey) as String
+        return DataPermohonSim(
+            jenisPemohon,
+            golonganSim,
+            alamatEmail,
+            poldaKedatangan,
+            satpasKedatangan,
+            alamatSatpas
+        )
+    }
+
+    private val kewarganegaraanSIMKey = "kewarganegaraanSIMKey"
+    private val nikSIMKey="nikSIMKey"
+    private val namaLengkapSIMKey = "namaLengkapSIMKey"
+    private val golonganDarahSIMKey = "golonganDarahSIMKey"
+    private val kodePosSIMKey = "kodePosSIMKey"
+    private val kotaSIMKey = "kotaSIMKey"
+    private val alamatSIMKey="alamatSIMKey"
+    private val noHandphoneSIMKey="noHandphoneSIMKey"
+    private val pendidikanSIMKey="pendidikanSIMKey"
+    private val pekerjaanSIMKey="pekerjaanSIMKey"
+
+fun setDataPribadi(dataDiriSim: DataDiriSim){
+    tinyDB.putString(kewarganegaraanSIMKey,dataDiriSim.kewarganegaraan)
+    tinyDB.putString(nikSIMKey,dataDiriSim.nik)
+    tinyDB.putString(namaLengkapSIMKey,dataDiriSim.namaLengkap)
+    tinyDB.putString(golonganDarahSIMKey,dataDiriSim.golonganDarah)
+    tinyDB.putString(kodePosSIMKey,dataDiriSim.kodePos)
+    tinyDB.putString(kotaSIMKey,dataDiriSim.kota)
+    tinyDB.putString(alamatSIMKey,dataDiriSim.alamat)
+    tinyDB.putString(noHandphoneSIMKey,dataDiriSim.noHandphone)
+    tinyDB.putString(pendidikanSIMKey,dataDiriSim.pendidikan)
+    tinyDB.putString(pekerjaanSIMKey,dataDiriSim.pekerjaan)
+}
+    fun getDataPribadi():DataDiriSim{
+        val kewarganegaraan = tinyDB.getString(kewarganegaraanSIMKey) as String
+        val nik = tinyDB.getString(nikSIMKey)as String
+        val namaLengkap = tinyDB.getString(namaLengkapSIMKey)as String
+        val golonganDarah = tinyDB.getString(golonganDarahSIMKey)as String
+        val kodePos = tinyDB.getString(kodePosSIMKey)as String
+        val kota = tinyDB.getString(kotaSIMKey)as String
+        val alamat = tinyDB.getString(alamatSIMKey)as String
+        val noHandphone = tinyDB.getString(noHandphoneSIMKey)as String
+        val pendidikan = tinyDB.getString(pendidikanSIMKey)as String
+        val pekerjaan = tinyDB.getString(pekerjaanSIMKey)as String
+        return DataDiriSim(kewarganegaraan,nik,namaLengkap,golonganDarah,kodePos,kota,alamat,noHandphone,pendidikan,pekerjaan)
+    }
 }

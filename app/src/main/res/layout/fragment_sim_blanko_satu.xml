@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView21"
+                android:id="@+id/ID_SIMBlankoSatu_BtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
@@ -34,11 +34,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SIM"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintStart_toEndOf="@+id/ID_SIMBlankoSatu_BtnBack"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -66,17 +67,20 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Informasi Pendaftaran"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView36" />
 
         <TextView
             android:id="@+id/textView144"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="*Web Registrasi SIM Online proses registrasi SIM Baru dan SIM Perpanjangan untuk golongan SIM A  dan SIM C *Lokasi Satpas yang dapat melayani registrasi secara online adalah satpas yang sudah online, Daftar satpas yang sudah online dapat dilihat disini pada bagian Daftar Satpas Online *Ketentuan mengenai Persyaratan Pendaftaran,  Perpanjangan SIM , Pengalihan Golongan SIM, Perubahan Data SIM, dan Penggantian SIM Rusak atau Hilang dapat dilihat disini. *Petunjuk penggunaan (user manual) dapat dilihat disini dan pilih Panduan Penggunaan Website Registrasi SIM  Online *Bagi pemohon yang telah melakukan proses registrasi melalui Web Registrasi SIM Online namun belum mendapatkan email konfirmasi registrasi dapat melakukan proses kirim ulang email konfirmasi disini. *Pembayaran registrasi SIM Online dapat dilakukan pada layanan bank BRI (tidak dikenakan biaya administrasiu)"
+            android:layout_marginTop="16dp"
+            android:text="*Web Registrasi SIM Online proses registrasi SIM Baru dan SIM Perpanjangan untuk golongan SIM A  dan SIM C \n\n*Lokasi Satpas yang dapat melayani registrasi secara online adalah satpas yang sudah online, Daftar satpas yang sudah online dapat dilihat disini pada bagian Daftar Satpas Online \n\n*Ketentuan mengenai Persyaratan Pendaftaran,  Perpanjangan SIM , Pengalihan Golongan SIM, Perubahan Data SIM, dan Penggantian SIM Rusak atau Hilang dapat dilihat disini. \n*Petunjuk penggunaan (user manual) dapat dilihat disini dan pilih Panduan Penggunaan Website Registrasi SIM  Online \n\n*Bagi pemohon yang telah melakukan proses registrasi melalui Web Registrasi SIM Online namun belum mendapatkan email konfirmasi registrasi dapat melakukan proses kirim ulang email konfirmasi disini. \n\n*Pembayaran registrasi SIM Online dapat dilakukan pada layanan bank BRI (tidak dikenakan biaya administrasiu)"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -89,6 +93,16 @@
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:srcCompat="@drawable/image29" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

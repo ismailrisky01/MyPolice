@@ -2,6 +2,7 @@ package com.example.mypolice.ui.dashboard.daftar_polisi.informasi
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mypolice.R
 import com.example.mypolice.databinding.FragmentDaftarPolisiInformasiDanLinkBinding
@@ -61,7 +62,9 @@ class DaftarPolisiInformasiDanLinkFragment :
             LinearLayoutManager(requireContext())
         binding.IDDaftarPolisiInformasiRecyclerView.adapter = adapter
         adapter.setData(data)
-
+binding.IDDaftarPolisiInformasiBtnBack.setOnClickListener {
+    findNavController().popBackStack()
+}
 
     }
 

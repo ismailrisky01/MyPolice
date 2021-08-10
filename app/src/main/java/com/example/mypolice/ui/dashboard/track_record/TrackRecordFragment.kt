@@ -47,7 +47,7 @@ binding.simmerView2.startShimmer()
             adapterDown.notifyDataSetChanged()
         })
         binding.IDHaloBtnBack.setOnClickListener {
-            findNavController().navigate(R.id.action_trackRecordFragment_to_dashboardFragment)
+            findNavController().popBackStack()
         }
 
     }

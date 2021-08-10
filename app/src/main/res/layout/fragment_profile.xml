@@ -19,7 +19,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/ID_Profile_BtnNama"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView38"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_ImageUser" />
@@ -34,7 +34,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView36"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView39"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNama" />
@@ -49,7 +49,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView37"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtTtl" />
@@ -64,7 +64,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView39"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtAlamat" />
@@ -79,7 +79,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView40"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoKtp" />
@@ -94,7 +94,7 @@
         android:focusable="auto"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView41"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView42"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoSim" />
@@ -119,82 +119,82 @@
         app:layout_constraintStart_toStartOf="@+id/imageView33"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ID_Profile_BtnNama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNama"
-        app:layout_constraintTop_toTopOf="@+id/ID_Profile_EdtNama" />
+<!--    <ImageView-->
+<!--        android:id="@+id/ID_Profile_BtnNama"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNama"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNama"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ID_Profile_EdtNama" />-->
 
-    <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtTtl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtTtl"
-        app:layout_constraintTop_toTopOf="@+id/ID_Profile_EdtTtl" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView36"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtTtl"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtTtl"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ID_Profile_EdtTtl" />-->
 
-    <ImageView
-        android:id="@+id/imageView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtAlamat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtAlamat"
-        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtTtl" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView37"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtAlamat"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtAlamat"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtTtl" />-->
 
-    <ImageView
-        android:id="@+id/imageView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtTtl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtTtl"
-        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtAlamat" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView38"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtTtl"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtTtl"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtAlamat" />-->
 
-    <ImageView
-        android:id="@+id/imageView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoKtp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoKtp"
-        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtAlamat" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView39"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoKtp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoKtp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtAlamat" />-->
 
-    <ImageView
-        android:id="@+id/imageView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoSim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoSim"
-        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoKtp" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView40"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoSim"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoSim"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoKtp" />-->
 
-    <ImageView
-        android:id="@+id/imageView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoSTNK"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoSTNK"
-        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoSim" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView41"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ID_Profile_EdtNoSTNK"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ID_Profile_EdtNoSTNK"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoSim" />-->
 
     <TextView
         android:id="@+id/textView38"
@@ -279,16 +279,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView33" />
 
-    <ImageView
-        android:id="@+id/ID_Profile_btnSetting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_baseline_settings_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView33" />
-
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
@@ -330,5 +320,15 @@
         app:layout_constraintEnd_toEndOf="@+id/ID_Profile_EdtNoSTNK"
         app:layout_constraintStart_toStartOf="@+id/ID_Profile_EdtNoSTNK"
         app:layout_constraintTop_toBottomOf="@+id/ID_Profile_EdtNoSTNK" />
+
+    <Button
+        android:id="@+id/ID_Profile_BtnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D11C1C"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="@+id/ID_Profile_BtnUpadte"
+        app:layout_constraintStart_toStartOf="@+id/ID_Profile_BtnUpadte"
+        app:layout_constraintTop_toBottomOf="@+id/ID_Profile_BtnUpadte" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView></layout>

@@ -1,11 +1,24 @@
 package com.example.mypolice.utils
 
+import android.Manifest
+import android.app.Activity
 import android.content.Context
+import android.content.pm.PackageManager
+import android.location.Location
 import android.net.Uri
+import android.util.Log
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mypolice.model.*
+import com.example.mypolice.ui.dashboard.halo_polisi.pemadam.PemadamAdapter
+import com.example.mypolice.utils.retrofit.Network
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -13,7 +26,10 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import es.dmoral.toasty.Toasty
+//import es.dmoral.toasty.Toasty
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -109,7 +125,7 @@ class Repository {
                 mutableList.value = data
             } else {
                 loading.dismiss()
-//mutableList.value  = ModelUser("Harap Isi","","","","","","","")
+mutableList.value  = ModelUser("Harap Isi","","","","","","","")
             }
         }
         return mutableList
@@ -125,11 +141,11 @@ class Repository {
             .document("UserAccount/${FirebaseAuth.getInstance().currentUser?.uid}/DataDiri")
             .set(modelUser).addOnSuccessListener {
                 logD("Succes Update Profile")
-                Toasty.success(context, "Success to update", Toast.LENGTH_SHORT, true).show()
+//                Toasty.success(context, "Success to update", Toast.LENGTH_SHORT, true).show()
                 loading.dismiss()
             }.addOnFailureListener {
                 logD("Error" + it.message)
-                Toasty.error(context, "Failed to update", Toast.LENGTH_SHORT, true).show()
+//                Toasty.error(context, "Failed to update", Toast.LENGTH_SHORT, true).show()
                 loading.dismiss()
 
             }
@@ -183,11 +199,12 @@ class Repository {
             modelLaporanKejadian.desktripsiKejadian
         )
         ref.set(data).addOnSuccessListener {
-            Toasty.success(context, "Success!", Toast.LENGTH_SHORT, true).show()
+            loading.dismiss()
+//            Toasty.success(context, "Success!", Toast.LENGTH_SHORT, true).show()
             loading.dismiss()
         }.addOnFailureListener {
             loading.dismiss()
-            Toasty.error(context, "This is an error toast.", Toast.LENGTH_SHORT, true).show()
+//            Toasty.error(context, "This is an error toast.", Toast.LENGTH_SHORT, true).show()
         }.addOnCompleteListener {
             loading.dismiss()
 
@@ -229,5 +246,65 @@ class Repository {
             loading.dismiss()
 
         }
+    }
+
+    fun getMapsData(context: Context,loc: LatLng, lokasi: String, name: String): LiveData<MutableList<Result>> {
+        val mutableList = MutableLiveData<MutableList<Result>>()
+        val loading = LoadingHelper(context)
+        loading.show()
+        Network().getServiceData().getData(
+            loc.latitude.toString() + "," + loc.longitude.toString(),
+            "20000",
+            lokasi, name,
+            "AIzaSyAt6rC_iziBuu0k3tscBmPp--H3kC7qwas"
+        )
+            .enqueue(object : Callback<ModelRoot> {
+                val data = mutableListOf<Result>()
+
+                override fun onResponse(call: Call<ModelRoot>, response: Response<ModelRoot>) {
+                    logD("Retrofit")
+                    response.body()?.results?.forEach {
+                        data.add(it)
+                    }
+                    mutableList.value = data
+                    loading.dismiss()
+                }
+
+                override fun onFailure(call: Call<ModelRoot>, t: Throwable) {
+                    logD(t.message + t.localizedMessage)
+                    loading.dismiss()
+                }
+            })
+        return mutableList
+    }
+
+    fun getMyLocation(context: Context,activity:Activity):LatLng{
+        val mFusedLocation = LocationServices.getFusedLocationProviderClient(context)
+        val adapter = PemadamAdapter()
+        if (ActivityCompat.checkSelfPermission(
+                context,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                context,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+        }
+        mFusedLocation.lastLocation.addOnSuccessListener(activity, object :
+            OnSuccessListener<Location> {
+            override fun onSuccess(location: Location?) {
+                // Do it all with location
+                Log.d("My Current location", "Lat : ${location?.latitude} Long : ${location?.longitude}")
+            }
+
+        })
+        return LatLng(1.0,1.0)
     }
 }

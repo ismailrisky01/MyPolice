@@ -2,6 +2,7 @@ package com.example.mypolice.ui.dashboard.track_record
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.example.mypolice.R
 import com.example.mypolice.databinding.FragmentDetailTrackRecordBinding
 import com.example.mypolice.utils.MyFragment
@@ -20,7 +21,9 @@ class DetailTrackRecordFragment : MyFragment<FragmentDetailTrackRecordBinding>(R
             Picasso.get().load(image).into(binding.IDDetailTrackImage)
             binding.IDDetailTrackTxtKeterangan.text = keterangan
 
-
+binding.IDDetailTrackBtnBack.setOnClickListener {
+    findNavController().popBackStack()
+}
 
         }
     }

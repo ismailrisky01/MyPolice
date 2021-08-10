@@ -25,5 +25,8 @@ class DokumenKendaraanFragment : MyFragment<FragmentDokumenKendaraanBinding>(R.l
         binding.bpkbCardView.setOnClickListener {
             findNavController().navigate(R.id.action_dokumenKendaraanFragment_to_bpkbFragment)
         }
+        binding.IDDokumenKendaraanBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }

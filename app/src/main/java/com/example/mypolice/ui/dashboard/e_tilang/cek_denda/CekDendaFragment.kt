@@ -3,6 +3,7 @@ package com.example.mypolice.ui.dashboard.e_tilang.cek_denda
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.mypolice.R
 import com.example.mypolice.databinding.FragmentCekDendaBinding
 import com.example.mypolice.ui.chat.ChatViewModel
@@ -22,7 +23,9 @@ class CekDendaFragment : MyFragment<FragmentCekDendaBinding>(R.layout.fragment_c
             binding.IDCekDendaEdtLokasi.setText("Malang Kota")
             binding.IDCekDendaEdtTipePelanggaran.setText("Tidak Punya SIM")
             binding.IDCekDendaEdtStatus.setText("Di tilang")
-
+        }
+        binding.IDCekDendaBtnBack.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 }

@@ -16,6 +16,7 @@ import com.example.mypolice.utils.LoadingHelper
 import com.example.mypolice.utils.MyFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
+//import es.dmoral.toasty.Toasty
 
 
 class RegistrasiFragment : MyFragment<FragmentRegistrasiBinding>(R.layout.fragment_registrasi) {
@@ -39,7 +40,7 @@ class RegistrasiFragment : MyFragment<FragmentRegistrasiBinding>(R.layout.fragme
                             user!!.sendEmailVerification()
                                 .addOnCompleteListener { task ->
                                     if (task.isSuccessful) {
-                                       loading.dismiss()
+
 
                                         Log.d(TAG, "Email sent.")
                                         Log.d("Registrasi", "createUserWithEmail:success")
@@ -47,6 +48,7 @@ class RegistrasiFragment : MyFragment<FragmentRegistrasiBinding>(R.layout.fragme
                                             displayName = username
                                         }
                                         user.updateProfile(profileUpdates).addOnCompleteListener {
+                                            loading.dismiss()
                                             findNavController().navigate(R.id.action_registrasiFragment_to_loginFragment)
                                         }
 
@@ -55,17 +57,14 @@ class RegistrasiFragment : MyFragment<FragmentRegistrasiBinding>(R.layout.fragme
 
                         } else {
                             loading.dismiss()
-
                             Log.w("Registrasi", "createUserWithEmail:failure", it.exception)
-                            Toast.makeText(
-                                requireContext(), "Authentication failed.",
-                                Toast.LENGTH_SHORT
-                            ).show()
+//                           Toasty.warning(requireContext(),"Authentication failed. ${it.exception?.message}",Toasty.LENGTH_SHORT).show()
                         }
                     }
             }else{
                 loading.dismiss()
-                Toast.makeText(requireContext(), "Password tidak sama", Toast.LENGTH_SHORT).show()
+//                Toasty.warning(requireContext(),"Password Not Match",Toasty.LENGTH_SHORT).show()
+
             }
 
         }

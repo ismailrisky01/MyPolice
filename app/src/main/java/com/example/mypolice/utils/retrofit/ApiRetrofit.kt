@@ -9,7 +9,7 @@ import retrofit2.http.*
 
 interface ApiRetrofit {
  @GET("json?")
-  fun getData(@Query("location")latlng:String?, @Query("radius")radius:String, @Query("type")type:String, @Query("key")key:String): Call<ModelRoot>
+  fun getData(@Query("location")latlng:String?, @Query("radius")radius:String, @Query("type")type:String, @Query("name")name:String, @Query("key")key:String): Call<ModelRoot>
 
 
 }
